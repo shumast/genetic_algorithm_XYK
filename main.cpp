@@ -163,7 +163,7 @@ gene Parabola::Breed(ll p1, ll p2) {
 	if (first < 50) initial = crossover;	// If first parent first. start from crossover.
 	else final = crossover + 1;// Else end at crossover.
 
-	for (ll i = initial; i < final; i++) {// Crossover!
+	for (ll i = initial; i < final; i++) {// Crossover
 		child.alleles[i] = population[p2].alleles[i];
 		if (gen() % 101 < 5) child.alleles[i] = (dl)gen() / RAND_MAX / RAND_MAX * 5 - 10;
 	}
